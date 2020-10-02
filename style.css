@@ -15,8 +15,7 @@ body {
   display: flex;
   background-color: transparent;
   justify-content: center;
-  padding: 1.5rem;
-  margin-left: 160px; 
+  padding: 1.5rem; 
 }
 
 .header input {
@@ -36,11 +35,11 @@ body {
   color: #7378c5;
 }
 
-.main {
+main {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   justify-content: center;
-  margin-left: 160px; 
+  margin-left: 200px;
 }
 
 .box-shadow {
@@ -105,6 +104,12 @@ body {
 /* END SIDEBAR */
 
 /* GAMES */
+
+.main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 
 .games {
   position: relative;
