@@ -3,7 +3,7 @@ const { readdirSync, readFileSync } = require('fs');
 const { process } = require('child_process')
 
 
-const main = document.querySelector('main');
+const main = document.getElementById('main');
 const form = document.querySelector('form');
 const searchEL = document.getElementById('search');
 
@@ -50,6 +50,20 @@ function showGames(games) {
       main.appendChild(gamesEl);
     }
   }
+}
+
+function login(data) {
+  if (!data) {
+    return;
+  };
+  getAccount(data);
+};
+
+function getAccount(data) {
+
+  // Pour le login
+
+  return data;
 }
 
 async function search(term) {

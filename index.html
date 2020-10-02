@@ -10,16 +10,22 @@
     <title></title>
   </head>
   <body>
-    <header>
-      <button id="change_type" class="btn change_type"><img src="./assets/grid.svg"></button>
-      <form action="">
-        <input type="text" id="search" placeholder="Search">
-      </form>
-    </header>
-    <main></main>
-    <div class="utils">
-      <button id="add_btn" class="btn btn-primary box-shadow" aria-label="Ajouter un jeux">+</button>
+    <div class="sidebar box-shadow">
+      <div class="head"><h6>-Mes amis</h6><button class="btn btn-warning">+</button></div>
+      <div class="account"><button class="btn btn-danger">MEYGAH</button></div>
     </div>
+    <main>
+      <div class="header">
+        <button id="change_type" class="btn change_type"><img src="./assets/grid.svg"></button>
+        <form action="">
+          <input type="text" id="search" placeholder="Search">
+        </form>
+      </div>
+      <div id="main" class="main"></div>
+      <div class="utils">
+        <button id="add_btn" class="btn btn-primary box-shadow" aria-label="Ajouter un jeux">+</button>
+      </div>
+    </main>
     <div class="waves box-shadow"></div>
   </body>
 </html>
