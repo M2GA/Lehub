@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <!-- https://electronjs.org/docs/tutorial/security#csp-meta-tag -->
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="renderer.js"></script>
+    <title></title>
+  </head>
+  <body>
+    <header>
+      <button id="change_type" class="btn change_type"><img src="./assets/grid.svg"></button>
+      <form action="">
+        <input type="text" id="search" placeholder="Search">
+      </form>
+    </header>
+    <main></main>
+    <div class="utils">
+      <button id="add_btn" class="btn btn-primary box-shadow" aria-label="Ajouter un jeux">+</button>
+    </div>
+    <div class="waves box-shadow"></div>
+  </body>
+</html>
