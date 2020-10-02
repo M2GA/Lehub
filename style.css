@@ -16,6 +16,7 @@ body {
   background-color: transparent;
   justify-content: center;
   padding: 1.5rem;
+  margin-left: 160px; 
 }
 
 .header input {
@@ -50,7 +51,8 @@ body {
 
 .sidebar {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  text-align: center;
   height: 100%;
   width: 200px;
   position: fixed;
@@ -63,21 +65,41 @@ body {
   background-color: #22254b;
 }
 
+.title {
+}
+
 .head {
   display: flex;
   align-items: center;
   width: 100%;
   height: 50px;
+  padding: 10px;
+}
+
+.head button {
+  margin-left: 50px;
+  background: transparent;
+  border: none;
+  color: white;
+  margin-bottom: 5px;
 }
 
 .account {
+  display: flex;
   position: absolute;
+  width: 100%;
+  height: 50px;
   bottom: 20px;
-  width: 80%;
 }
 
 .account button {
   width: 100%;
+  background: transparent;
+  border: none;
+}
+
+.account button:hover {
+  color: white;
 }
 
 /* END SIDEBAR */
