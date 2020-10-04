@@ -11,35 +11,15 @@ body {
   overflow-x: hidden;
 }
 
-.header {
-  display: flex;
-  background-color: transparent;
-  justify-content: center;
-  padding: 1.5rem; 
-}
-
-.header input {
-  position: relative;
-  background-color: #22254b;
-  color: white;
-  border: 2px solid #eee;
-  border-radius: 50px;
-  padding: 0.5rem 1rem;
-}
-
-.header button {
-  margin-right: 20px;
-}
-
-#search::placeholder {
-  color: #7378c5;
-}
-
 main {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-left: 200px;
+  margin-left: 220px;
+}
+
+button:focus {
+  outline: transparent;
 }
 
 .box-shadow {
@@ -53,7 +33,7 @@ main {
   flex-direction: column;
   text-align: center;
   height: 100%;
-  width: 200px;
+  width: 220px;
   position: fixed;
   z-index: 1;
   top: 0;
@@ -61,10 +41,11 @@ main {
   overflow-x: hidden;
   overflow-y: hidden;
   color: white;
-  background-color: #22254b;
+  background-color: #1a1c36;
 }
 
 .title {
+  margin-top: 20px;
 }
 
 .head {
@@ -95,15 +76,44 @@ main {
   width: 100%;
   background: transparent;
   border: none;
+  color: white;
 }
 
 .account button:hover {
-  color: white;
 }
 
 /* END SIDEBAR */
 
-/* GAMES */
+/* MAIN */
+
+.header {
+  display: flex;
+  background-color: transparent;
+  justify-content: center;
+  padding: 1.5rem; 
+}
+
+.header .right {
+  display: flex;
+  position: relative;
+  right: 0;
+}
+
+.header input {
+  background-color: #22254b;
+  color: white;
+  border: 2px solid #eee;
+  border-radius: 50px;
+  padding: 0.5rem 1rem;
+}
+
+.header button {
+  margin-right: 20px;
+}
+
+#search::placeholder {
+  color: #7378c5;
+}
 
 .main {
   display: flex;
@@ -187,9 +197,30 @@ main {
   border-radius: 35%;
   background: rgba(255, 255, 255, .75);
   animation: wave 15s infinite linear;
-
   z-index: -1;
 }
+
+/* MODAL */
+
+.modale {
+  display: none;
+  position: fixed;
+  left: 40px;
+  bottom: 70px;
+  width: 200px;
+  overflow: hidden;
+  z-index: 1;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #1a1c36;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 100%; /* Could be more or less, depending on screen size */
+}
+
+/* END MODAL */
 
 @keyframes wave {
   from { transform: rotate(0deg);}

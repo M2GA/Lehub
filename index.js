@@ -8,9 +8,8 @@ let win
 function createWindow () {
   // Cree la fenetre du navigateur.
   win = new BrowserWindow({
-    title: "PlayHub",
-    width: 800,
-    height: 600,
+    width: 1300,
+    height: 800,
     webPreferences: {
       devTools : true,
       nodeIntegration: true
@@ -18,7 +17,7 @@ function createWindow () {
   })
 
   // et charger le fichier index.html de l'application.
-  win.loadFile('index.html')
+  win.loadFile('app/src/index.html')
 
   // Cache le menu
   win.setMenuBarVisibility(false)
@@ -31,16 +30,12 @@ app.whenReady().then(createWindow)
 
 // Quitter si toutes les fenêtres ont été fermées.
 app.on('window-all-closed', () => {
-  // Sur macOS, il est commun pour une application et leur barre de menu
-  // de rester active tant que l'utilisateur ne quitte pas explicitement avec Cmd + Q
   if (process.platform !== 'darwin') {
     app.quit()
   }
 })
 
 app.on('activate', () => {
-  // Sur macOS, il est commun de re-créer une fenêtre de l'application quand
-  // l'icône du dock est cliquée et qu'il n'y a pas d'autres fenêtres d'ouvertes.
   if (win === null) {
     createWindow()
   }
