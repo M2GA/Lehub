@@ -12,13 +12,19 @@
   <body>
     <div class="sidebar box-shadow">
       <div class="title"><h1>LE HUB</h1></div>
-      <div class="head">
-        <h6>-  Mes amis</h6><button>+</button>
+      <div class="sideBtn">
+        <div><button>Ajouter</button></div>
+        <div><button>Amis</button></div>
+      </div>
+      <div class="friendList">
+        <div type="button" class="friend">Ael #2801 <span class="span-shadow">></span></div>
+        <div class="friend"><button id="">Kml #2801</button></div>
       </div>
       <div class="account">
-        <button id="a-btn">MEYGAH</button>
+        <button id="aBtn">MEYGAH</button>
       </div>
-      <div id="myModal" class="modale">
+      </div>
+      <div id="modal" class="modale">
         <!-- Modal content -->
         <div class="modal-content">
           <button class="btn btn-primary">Settings</button>
@@ -26,17 +32,17 @@
       </div>
     </div>
     <main>
-      <div class="header">
+      <div class="navi">
         <div class="right">
-          <button id="change_type" class="btn change_type"><img src="../../assets/grid.svg"></button>
-          <form action="">
-            <input type="text" id="search" placeholder="Search">
+          <button id="changeView" class="btn change_type"><img src="../../assets/grid.svg"></button>
+          <form action="" id="searchForm">
+            <input type="text" id="searchInput" placeholder="Search">
           </form>
         </div>
       </div>
       <div id="main" class="main"></div>
       <div class="utils">
-        <button id="add_btn" class="btn btn-primary box-shadow" aria-label="Ajouter un jeux">+</button>
+        <button id="addGames" class="btn btn-primary box-shadow" aria-label="Ajouter un jeux">+</button>
       </div>
     </main>
     <div class="waves box-shadow"></div>

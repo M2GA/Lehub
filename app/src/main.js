@@ -12,22 +12,23 @@ import { showGames } from '../../functions/showGames.js'
 
 // ELEMENTS
 var main = document.getElementById('main');
-var form = document.querySelector('form');
-var searchEL = document.getElementById('search');
-var modal = document.getElementById("myModal");
-var add_btn = document.getElementById('add_btn');
-var change_type = document.getElementById('change_type');
-var a_btn = document.getElementById('a-btn');
+var searchForm = document.getElementById('searchForm');
+var searchInput = document.getElementById('searchInput');
+var modal = document.getElementById("modal");
+var addGames = document.getElementById('addGames');
+var changeView = document.getElementById('changeView');
+var aBtn = document.getElementById('aBtn');
+var div = document.querySelector('div')[0];
 
 //FUNCTIONS
 showGames(resp);
 
 // Events Listener
-add_btn.addEventListener('click', () => {
+addGames.addEventListener('click', () => {
   ipcRenderer.send('open-file-dialog', 'true')
 });
 
-form.addEventListener('submit', (e) => {
+searchForm.addEventListener('submit', (e) => {
   e.preventDefault();
   const searchTerm = searchEL.value;
   console.log(searchTerm);
@@ -35,20 +36,20 @@ form.addEventListener('submit', (e) => {
   form.reset();
 });
 
-change_type.addEventListener('click', (e) => {
+changeView.addEventListener('click', (e) => {
   e.preventDefault();
-  El();
 });
 
-a_btn.addEventListener('click', (e) => {
+aBtn.addEventListener('click', (e) => {
+  e.preventDefault();
   modal.style.display = "block";
 });
 
 window.addEventListener('click', (e) => {
   if (event.target == modal) {
     modal.style.display = "none";
-  }
-})
+  };
+});
 
 // IPC
 ipcRenderer.on('selectedFile', (e, args) => {
