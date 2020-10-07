@@ -1,65 +1,50 @@
 {
   "1": {
     "name": "Valorant",
-    "category": "Fps",
-    "description": "lorem lorem lorem lorem lorem lorem lorem lorem lorem",
     "poids": "20",
     "path": "C:\\Riot Games\\VALORANT\\live\\VALORANT.exe",
-    "img": "https://static-cdn.jtvnw.net/ttv-boxart/VALORANT-285x380.jpg",
-    "online": true
+    "img": "https://static-cdn.jtvnw.net/ttv-boxart/VALORANT-285x380.jpg"
     },
   "2":{
     "name": "Fortnite",
-    "category": "Battle Royale",
-    "description": "lorem",
     "poids": "80",
     "path": "Un",
-    "img": "https://static-cdn.jtvnw.net/ttv-boxart/Fortnite-285x380.jpg",
-    "online": true
+    "img": "https://static-cdn.jtvnw.net/ttv-boxart/Fortnite-285x380.jpg"
   },
   "3":{
     "name": "Fall Guys",
-    "category": "",
-    "description": "lorem",
     "poids": "80",
     "path": "Un",
-    "img": "https://static-cdn.jtvnw.net/ttv-boxart/Fall%20Guys-285x380.jpg",
-    "online": true
+    "img": "https://static-cdn.jtvnw.net/ttv-boxart/Fall%20Guys-285x380.jpg"
   },
   "4":{
     "name": "Rocket League",
-    "category": "",
-    "description": "lorem",
     "poids": "80",
     "path": "Un",
-    "img": "https://static-cdn.jtvnw.net/ttv-boxart/Rocket%20League-285x380.jpg",
-    "online": true
+    "img": "https://static-cdn.jtvnw.net/ttv-boxart/Rocket%20League-285x380.jpg"
   },
   "5":{
-    "name": "Apex",
-    "category": "",
-    "description": "lorem",
+    "name": "Apex Legends",
     "poids": "80",
     "path": "Un",
-    "img": "https://static-cdn.jtvnw.net/ttv-boxart/Apex%20Legends-285x380.jpg",
-    "online": true
+    "img": "https://static-cdn.jtvnw.net/ttv-boxart/Apex%20Legends-285x380.jpg"
   },
   "6":{
     "name": "CS-GO",
-    "category": "",
-    "description": "lorem",
     "poids": "80",
     "path": "Un",
-    "img": "https://static-cdn.jtvnw.net/ttv-boxart/Counter-Strike:%20Global%20Offensive-285x380.jpg",
-    "online": true
+    "img": "https://static-cdn.jtvnw.net/ttv-boxart/Counter-Strike:%20Global%20Offensive-285x380.jpg"
   },
   "7":{
     "name": "Warfare",
-    "category": "",
-    "description": "lorem",
     "poids": "80",
     "path": "Un",
-    "img": "https://static-cdn.jtvnw.net/ttv-boxart/Call%20Of%20Duty:%20Modern%20Warfare-285x380.jpg",
-    "online": true
+    "img": "https://static-cdn.jtvnw.net/ttv-boxart/Call%20Of%20Duty:%20Modern%20Warfare-285x380.jpg"
+  },
+  "8":{
+    "name": "Raimbox",
+    "poids": "80",
+    "path": "Un",
+    "img": "https://static-cdn.jtvnw.net/ttv-boxart/Tom%20Clancy%27s%20Rainbow%20Six:%20Siege-285x380.jpg"
   }
 }

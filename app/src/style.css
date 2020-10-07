@@ -23,7 +23,7 @@ button:focus {
 }
 
 .box-shadow {
-  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.6);
 }
 
 .span-shadow {
@@ -76,24 +76,23 @@ button:focus {
   height: 100%;
 }
 
-.friend {
+.friendLabel {
   display: flex;
-  background-color: red;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #1a1c36;
   border-radius: 5px;
   margin: 15px;
   height: 50px;
 }
 
-.friend span {
-  background-color: blue;
+.friendSpan {
+  margin-left: 5px;
 }
 
-.friend button {
-  color: white;
-  background: transparent;
-  border: none;
-  height: 100%;
-  width: 100%;
+.friendLabel small {
+  color: cornflowerblue;
 }
 
 .account {
@@ -109,9 +108,6 @@ button:focus {
   background: transparent;
   border: none;
   color: white;
-}
-
-.account button:hover {
 }
 /* END SIDEBAR */
 

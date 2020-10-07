@@ -10,24 +10,29 @@
     <title></title>
   </head>
   <body>
-    <div class="sidebar box-shadow">
-      <div class="title"><h1>LE HUB</h1></div>
+    <div id="sidebar" class="sidebar box-shadow">
+      <div type="button" id="home" class="title"><h1>LE HUB</h1></div>
       <div class="sideBtn">
-        <div><button>Ajouter</button></div>
-        <div><button>Amis</button></div>
+        <div><button id="addFriendButton" >Ajouter</button></div>
+        <div><button id="friendListButton">Amis</button></div>
       </div>
-      <div class="friendList">
-        <div type="button" class="friend">Ael #2801 <span class="span-shadow">></span></div>
-        <div class="friend"><button id="">Kml #2801</button></div>
+      <div id="addFriend" class="addFirend">
+
+      </div>
+      <div id="friendList" class="friendList current">
+        <div type="button" class="friendLabel box-shadow" id="friendLabel"><div id="accountName">Ael<span class="friendSpan">#2801</span></div><small>Joue à Fortnite</small>
+      </div>
       </div>
       <div class="account">
         <button id="aBtn">MEYGAH</button>
       </div>
       </div>
-      <div id="modal" class="modale">
-        <!-- Modal content -->
-        <div class="modal-content">
-          <button class="btn btn-primary">Settings</button>
+      <div class="wow">
+        <div id="modal" class="modale">
+          <!-- Modal content -->
+          <div class="modal-content">
+            <button id="settingButton" class="btn btn-primary">Settings</button>
+          </div>
         </div>
       </div>
     </div>
