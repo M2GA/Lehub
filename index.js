@@ -18,8 +18,8 @@ function createWindow () {
     }
   });
 
-  if (config.login == false) win.loadFile('app/src/pages/login/login.html');
-  if (config.login == true ) win.loadFile('app/src/pages/app/app.html');
+  if (config.login == false) win.loadFile('app/src/pages/login/login.html').then(err => {console.log(err)});
+  if (config.login == true ) win.loadFile('app/src/pages/app/app.html').then(err => {console.log(err)});
 
   // Cache le menu
   win.setMenuBarVisibility(false);
