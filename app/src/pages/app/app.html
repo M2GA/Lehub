@@ -2,27 +2,30 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <!-- https://electronjs.org/docs/tutorial/security#csp-meta-tag -->
     <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
-    <script defer type="module" src="main.js"></script>
+    <script defer type="module" src="./main.js"></script>
     <title></title>
   </head>
   <body>
     <div id="sidebar" class="sidebar box-shadow">
-      <div type="button" id="home" class="title"><h1>LE HUB</h1></div>
-      <div class="sideBtn">
-        <div><button id="addFriendButton" >Ajouter</button></div>
-        <div><button id="friendListButton">Amis</button></div>
-      </div>
-      <div id="addFriend" class="addFirend">
 
+      <div type="button" id="home" class="title"><h1>LE HUB</h1></div>
+
+      <div class="tab-btn">
+        <button id="btn1" >Ajouter</button>
+        <button id="btn2" class="active">Amis</button>
       </div>
-      <div id="friendList" class="friendList current">
-        <div type="button" class="friendLabel box-shadow" id="friendLabel"><div id="accountName">Ael<span class="friendSpan">#2801</span></div><small>Joue à Fortnite</small>
+
+      <div class="tabs">
+        <div id="tab1" class="tab-content" hidden="hidden">
+        </div>
+        <div id="tab2" class="tab-content active">
+          
+        </div>
       </div>
-      </div>
+
       <div class="account">
         <button id="aBtn">MEYGAH</button>
       </div>

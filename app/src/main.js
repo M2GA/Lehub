@@ -1,23 +1,20 @@
 // MODULES
-const { ipcRenderer } = require('electron')
-const { readdirSync, readFileSync } = require('fs');
-const { process } = require('child_process');
-const { log } = require('console');
+const { ipcRenderer } = require('electron');
+const { readFileSync } = require('fs');
 
 // DATA
-const resp = readFileSync('./db/db.json', 'UTF-8');
+const games = readFileSync('./db/games.json', 'UTF-8');
+const friends = readFileSync('./db/friends.json', 'UTF-8');
 
 // IMPORT
 import { showGames } from '../../functions/showGames.js'
+import { showFriends } from '../../functions/showFriends.js'
 
 // ELEMENTS
 var html = document.querySelector('html');
 var main = document.getElementById('main');
 var home = document.getElementById('home');
-var friendList = document.getElementById('friendList');
-var friendListButton = document.getElementById('friendListButton');
-var addFriend = document.getElementById('addFriend');
-var addFriendButton = document.getElementById('addFriendButton');
+var tabButtons = document.querySelectorAll('.tab-btn button');
 var sideBar = document.getElementById('sidebar')
 var searchForm = document.getElementById('searchForm');
 var searchInput = document.getElementById('searchInput');
@@ -28,12 +25,13 @@ var changeView = document.getElementById('changeView');
 var aBtn = document.getElementById('aBtn');
 
 //FUNCTIONS
-showGames(resp);
+showGames(games);
+showFriends(friends);
 
 // Events Listener
 home.addEventListener('click', (e) => {
   e.preventDefault();
-  showGames(resp);
+  showGames(games);
 })
 
 addGames.addEventListener('click', (e) => {
@@ -61,16 +59,16 @@ settingButton.addEventListener('click', (e) => {
   modal.style.display = "none";
 });
 
-addFriendButton.addEventListener('click', (e) => {
-  addFriend.style.display = "block";
+tabButtons.forEach(btn => {
+  console.log(btn.index);
+  btn.addEventListener('click', () => {
+    // si il l'à on fait rien sinon on lui rajoute et on le supprie au autres
+    console.log(btn.id);
+    if (btn.classList.contains('active')) return;
+  });
 });
 
-friendList.addEventListener('click', (e) => {
-  
-})
-
 window.addEventListener('click', (e) => {
-  console.log(event.target);
   if (event.target == main ) {
     modal.style.display = "none";
   };

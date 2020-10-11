@@ -1,12 +1,12 @@
 const { readdirSync, readFileSync } = require('fs');
 
 // DATA
-const dataGames = readFileSync('./db/games.json', 'UTF-8');
+const dataGames = readFileSync('./db/friends.json', 'UTF-8');
 
-async function getGames(data) {
+async function getFriends(data) {
     if (!data) return;
     const resp = JSON.parse(data);
     return resp;
 };
 
-export { getGames };
+export { getFriends };

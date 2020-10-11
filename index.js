@@ -1,9 +1,11 @@
-const { app, BrowserWindow, ipcMain, dialog } = require('electron')
+const { app, BrowserWindow, ipcMain, dialog } = require('electron');
+const { readFileSync } = require('fs');
 
-const fs = require('fs')
-const { dir } = require('console')
+// DATA
+const config = JSON.parse(readFileSync('./config.json', 'UTF-8'));
+console.log(config.login);
 
-let win
+let win;
 
 function createWindow () {
   // Cree la fenetre du navigateur.
@@ -14,32 +16,32 @@ function createWindow () {
       devTools : true,
       nodeIntegration: true
     }
-  })
+  });
 
-  // et charger le fichier index.html de l'application.
-  win.loadFile('app/src/index.html')
+  if (config.login == false) win.loadFile('app/src/pages/login/login.html');
+  if (config.login == true ) win.loadFile('app/src/pages/app/app.html');
 
   // Cache le menu
-  win.setMenuBarVisibility(false)
-}
+  win.setMenuBarVisibility(false);
+};
 
 // Cette méthode sera appelée quant Electron aura fini
 // de s'initialiser et prêt à créer des fenêtres de navigation.
 // Certaines APIs peuvent être utilisées uniquement quand cet événement est émit.
-app.whenReady().then(createWindow)
+app.whenReady().then(createWindow);
 
 // Quitter si toutes les fenêtres ont été fermées.
 app.on('window-all-closed', () => {
   if (process.platform !== 'darwin') {
-    app.quit()
-  }
-})
+    app.quit();
+  };
+});
 
 app.on('activate', () => {
   if (win === null) {
-    createWindow()
-  }
-})
+    createWindow();
+  };
+});
 
 ipcMain.on('open-file-dialog', (e, args) => {
   dialog.showOpenDialog({
@@ -58,22 +60,22 @@ ipcMain.on('open-file-dialog', (e, args) => {
       // var res = exe.split('.')[0];
       // console.log(res);
       console.log(result);
-      if (result.filePaths) {
-        let name = result.filePaths[0].split(/(\\\\?([^\\/]*[\\/])*)([^\\/]+)$/g); 
-        var path = result.filePaths;
-        let content = result.filePaths;
-        let dir = 'save.json';
+    if (result.filePaths) {
+      let name = result.filePaths[0].split(/(\\\\?([^\\/]*[\\/])*)([^\\/]+)$/g); 
+       var path = result.filePaths;
+      let content = result.filePaths;
+      let dir = 'save.json';
 
-        e.reply('selectedFile', name[3]);
+      e.reply('selectedFile', name[3]);
         
-        fs.writeFile(dir, JSON.stringify(content), (err) => {
-          if (err) {
-            console.error(err);
-          }
-          console.log('Saved!');
-        });
-    }
+      fs.writeFile(dir, JSON.stringify(content), (err) => {
+        if (err) {
+          console.error(err);
+        }
+        console.log('Saved!');
+      });
+    };
   }).catch(err => {
-    console.error(err);
-  })
-})
+  console.error(err);
+});
+});

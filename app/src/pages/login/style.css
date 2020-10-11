@@ -1,0 +1,71 @@
+* {
+    outline: transparent;
+    user-select: none;
+    box-sizing: border-box;
+  }
+  
+  body {
+    display: flex;
+    background-color: #22254b;
+    margin: 0px;
+    overflow-x: hidden;
+    color: white;
+  }
+  
+  main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 220px;
+  }
+  
+  button:focus {
+    outline: transparent;
+  }
+  
+  .box-shadow {
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.6);
+  }
+  
+  .span-shadow {
+    box-shadow: -10px 0px 5px rgba(0, 0, 0, 0.2);
+  }
+
+  .waves {
+    width: 1000px;
+    height: 1025px;
+    position: absolute;
+    top: -25%;
+    left: 50%;
+    margin-left: -500px;
+    margin-top: -500px;
+    border-radius: 35%;
+    background: rgba(255, 255, 255, .75);
+    animation: wave 15s infinite linear;
+    z-index: -1;
+  }
+  /* END GAMES */
+  
+  /* MODAL */
+  .modale {
+    display: none;
+    position: fixed;
+    left: 40px;
+    bottom: 70px;
+    width: 200px;
+    overflow: hidden;
+    z-index: 1;
+  }
+  
+  .modal-content {
+    background-color: #1a1c36;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 100%;
+  }
+  /* END MODAL */
+  
+  @keyframes wave {
+    from { transform: rotate(0deg);}
+    from { transform: rotate(360deg);}
+  }
