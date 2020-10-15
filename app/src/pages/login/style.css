@@ -6,21 +6,13 @@
   
   body {
     display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
     background-color: #22254b;
     margin: 0px;
     overflow-x: hidden;
     color: white;
-  }
-  
-  main {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-left: 220px;
-  }
-  
-  button:focus {
-    outline: transparent;
   }
   
   .box-shadow {
@@ -44,26 +36,6 @@
     animation: wave 15s infinite linear;
     z-index: -1;
   }
-  /* END GAMES */
-  
-  /* MODAL */
-  .modale {
-    display: none;
-    position: fixed;
-    left: 40px;
-    bottom: 70px;
-    width: 200px;
-    overflow: hidden;
-    z-index: 1;
-  }
-  
-  .modal-content {
-    background-color: #1a1c36;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 100%;
-  }
-  /* END MODAL */
   
   @keyframes wave {
     from { transform: rotate(0deg);}
