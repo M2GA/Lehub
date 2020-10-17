@@ -1,4 +1,7 @@
-const { app, BrowserWindow, ipcMain, dialog } = require('electron');
+const { app, 
+        BrowserWindow, 
+        ipcMain, 
+        dialog } = require('electron');
 const { readFileSync } = require('fs');
 
 // DATA
@@ -17,7 +20,7 @@ function createWindow () {
       nodeIntegration: true
     }
   });
-  
+
   win.loadFile('app/src/app.html');
 
   // Cache le menu
@@ -42,7 +45,9 @@ app.on('activate', () => {
   };
 });
 
-ipcMain.on('open-file-dialog', (e, args) => {
+app.addRecentDocument('/Users/USERNAME/Desktop/work.type')
+
+ipcMain.on('open-file-dialog', (event) => {
   dialog.showOpenDialog({
     title: 'Selectionner Votre jeu !',
     defaultPath: 'C:',
@@ -61,11 +66,11 @@ ipcMain.on('open-file-dialog', (e, args) => {
       console.log(result);
     if (result.filePaths) {
       let name = result.filePaths[0].split(/(\\\\?([^\\/]*[\\/])*)([^\\/]+)$/g); 
-       var path = result.filePaths;
+      var path = result.filePaths;
       let content = result.filePaths;
       let dir = 'save.json';
 
-      e.reply('selectedFile', name[3]);
+      event.reply('selectedFile', name[3]);
         
       fs.writeFile(dir, JSON.stringify(content), (err) => {
         if (err) {
