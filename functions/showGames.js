@@ -6,7 +6,7 @@ async function showGames(data) {
   let games = await getGames(data);
 
   // Clear main
-  main.innerHTML = '';
+  view.innerHTML = '';
   
   for (const key in games) {
     if (games.hasOwnProperty(key)) {
@@ -16,9 +16,10 @@ async function showGames(data) {
       gamesEl.innerHTML = `
       <img src="${games[key].img}">
       <div class="overview box-shadow">
-          <button id="play" class="btn btn-warning box-shadow">JOUER</button>
+          <button id="play" class="btn btn-warning box-shadow" data-key=${key}>JOUER</button>
+          <button id="settings" class="btn btn-secondary box-shadow" data-key=${key}>Fichiers du jeux</button>
       </div>`;
-      main.appendChild(gamesEl);
+      view.appendChild(gamesEl);
     };
   };
 };

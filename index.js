@@ -17,9 +17,8 @@ function createWindow () {
       nodeIntegration: true
     }
   });
-
-  if (config.login == false) win.loadFile('app/src/pages/login/login.html').then(err => {console.log(err)});
-  if (config.login == true ) win.loadFile('app/src/pages/app/app.html').then(err => {console.log(err)});
+  
+  win.loadFile('app/src/app.html');
 
   // Cache le menu
   win.setMenuBarVisibility(false);

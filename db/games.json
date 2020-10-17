@@ -46,5 +46,17 @@
     "poids": "80",
     "path": "Un",
     "img": "https://static-cdn.jtvnw.net/ttv-boxart/Tom%20Clancy%27s%20Rainbow%20Six:%20Siege-285x380.jpg"
+  },
+  "9":{
+    "name": "Amon Us",
+    "poids": "80",
+    "path": "Un",
+    "img": "https://static-cdn.jtvnw.net/ttv-boxart/Among%20Us-285x380.jpg"
+  },
+  "10":{
+    "name": "League Of Legends",
+    "poids": "80",
+    "path": "Un",
+    "img": "https://static-cdn.jtvnw.net/ttv-boxart/League%20of%20Legends-285x380.jpg"
   }
 }
