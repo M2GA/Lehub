@@ -1,3 +1,5 @@
 {
-    "login" : true
+    "login": true,
+    "network": true,
+    "mem": 15
 }

@@ -23,16 +23,11 @@ function createWindow () {
 
   win.loadFile('app/src/app.html');
 
-  // Cache le menu
   win.setMenuBarVisibility(false);
 };
 
-// Cette méthode sera appelée quant Electron aura fini
-// de s'initialiser et prêt à créer des fenêtres de navigation.
-// Certaines APIs peuvent être utilisées uniquement quand cet événement est émit.
 app.whenReady().then(createWindow);
 
-// Quitter si toutes les fenêtres ont été fermées.
 app.on('window-all-closed', () => {
   if (process.platform !== 'darwin') {
     app.quit();
@@ -45,7 +40,6 @@ app.on('activate', () => {
   };
 });
 
-app.addRecentDocument('/Users/USERNAME/Desktop/work.type')
 
 ipcMain.on('open-file-dialog', (event) => {
   dialog.showOpenDialog({
@@ -57,6 +51,7 @@ ipcMain.on('open-file-dialog', (event) => {
       {name: '.exe', extensions: ['exe']},
     ]
   }).then(result => {
+    console.log(result);
     if (result.canceled) return;
       // var str = 'C:\\Riot Games\\VALORANT\\live\\VALORANT.exe';
       // var arr = str.split('\\ *REGEX');
@@ -68,9 +63,9 @@ ipcMain.on('open-file-dialog', (event) => {
       let name = result.filePaths[0].split(/(\\\\?([^\\/]*[\\/])*)([^\\/]+)$/g); 
       var path = result.filePaths;
       let content = result.filePaths;
-      let dir = 'save.json';
+      let dir = 'db/save.json';
 
-      event.reply('selectedFile', name[3]);
+      event.reply('selectedFile', path);
         
       fs.writeFile(dir, JSON.stringify(content), (err) => {
         if (err) {

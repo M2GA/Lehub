@@ -5,21 +5,22 @@
     <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
-    <script defer type="module" src="./main.js"></script>
+    <script defer type="module" src="./render.js"></script>
   </head>
   <body>
+    <div class="waves box-shadow"></div>
     <main>
       <div class="header">
-        <div class="right">
-          <button id="changeView" class="btn change_type"><img src="../../assets/grid.svg"></button>
-          <form action="" id="searchForm">
-            <input type="text" id="searchInput" placeholder="Search">
-          </form>
-        </div>
+        <button id="addGames" class="btn"><img src="../../assets/grid.svg"></button>
+        <form id="searchForm">
+          <input type="text" id="searchInput" placeholder="Search">
+        </form>
       </div>
       <div id="view" class="view"></div>
     </main>
-    <div class="waves box-shadow"></div>
-    <footer>LeHub tout droits réserver - 2020 <h3 id='cpu'></h3></footer>
+    <div class="os box-shadow">
+        <h3 id='cpu'>0</h3> <h3 id="ram">0</h3>
+    </div>
+    </footer>
   </body>
 </html>

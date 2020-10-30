@@ -1,7 +1,7 @@
 {
   "name": "lehub",
   "description": "",
-  "main": "index.js",
+  "main": "main.js",
   "scripts": {
     "start": "electron ."
   },
