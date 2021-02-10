@@ -1,32 +1,65 @@
-const { app, 
-        BrowserWindow, 
-        ipcMain, 
-        dialog } = require('electron');
-const { readFileSync } = require('fs');
+"use strict";
+
+const { app, BrowserWindow, ipcMain, dialog } = require('electron');
+const ejs                                     = require('ejs-electron');
+const fs                                      = require('fs');
+const path                                    = require('path');
+const url                                     = require('url');
 
 // DATA
-const config = JSON.parse(readFileSync('./config.json', 'UTF-8'));
-console.log(config.login);
+const config = JSON.parse(fs.readFileSync('./config.json', 'UTF-8'));
+
+app.disableHardwareAcceleration();
+
+app.allowRendererProcessReuse = false;
+
+let update = false;
+function checkUpdate() {
+  console.log('Sarting Check Update');
+  if (update || update == true) startUpdate();
+  return update;
+};
+
+function startUpdate() {
+  console.log('Sarting Updater');
+  // Module updater
+};
 
 let win;
-
-function createWindow () {
-  // Cree la fenetre du navigateur.
-  win = new BrowserWindow({
-    width: 1300,
+app.whenReady().then(startApp);
+async function startApp() {
+  const update = await checkUpdate();
+  if (update == false) {
+  console.log('Starting app');
+    win = new BrowserWindow({
+    width: 1435,
     height: 800,
+    icon: getPlatformIcon(('icon')),
     webPreferences: {
       devTools : true,
       nodeIntegration: true
     }
   });
 
-  win.loadFile('app/src/app.html');
+  win.loadURL(url.format({
+    pathname: path.join(__dirname, 'views', 'app.ejs'),
+    protocol: 'file:',
+    slashes: true
+  }));
 
+  // Disable comment on public version
+  //win.removeMenu();
+
+  // Activate comment on production
   win.setMenuBarVisibility(false);
-};
 
-app.whenReady().then(createWindow);
+  win.resizable = true;
+
+  win.on('closed', () => {
+      win = null
+  });
+};
+};
 
 app.on('window-all-closed', () => {
   if (process.platform !== 'darwin') {
@@ -34,14 +67,24 @@ app.on('window-all-closed', () => {
   };
 });
 
-app.on('activate', () => {
-  if (win === null) {
-    createWindow();
+function getPlatformIcon(filename) {
+  let ext
+  switch(process.platform) {
+    // Change ext to ico
+    case 'win32':
+      ext = 'png'
+      break
+    case 'darwin':
+    case 'linux':
+    default:
+      ext = 'png'
+      break
   };
-});
-
+  return path.join(__dirname, 'resources', `${filename}.${ext}`);
+};
 
 ipcMain.on('open-file-dialog', (event) => {
+
   dialog.showOpenDialog({
     title: 'Selectionner Votre jeu !',
     defaultPath: 'C:',

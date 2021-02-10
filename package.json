@@ -1,7 +1,12 @@
 {
   "name": "lehub",
-  "description": "",
-  "main": "main.js",
+  "version": "1.0.0",
+  "author": {
+    "name": "Lucas"
+  },
+  "license": "MIT",
+  "main": "main",
+  "private": true,
   "scripts": {
     "start": "electron ."
   },
@@ -10,9 +15,11 @@
   },
   "dependencies": {
     "ejs": "^3.1.5",
-    "express": "^4.17.1",
+    "ejs-electron": "^2.1.1",
     "fs": "0.0.1-security",
+    "os": "^0.1.1",
     "os-utils": "0.0.14",
-    "socket.io": "^2.3.0"
+    "socket.io-client": "^3.0.3",
+    "update-electron-app": "^2.0.1"
   }
 }

@@ -1,0 +1,367 @@
+* {
+  outline: 0;
+  user-select: none;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: sans-serif;
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #22254b;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 250px;
+  height: 100%;
+  width: auto;
+}
+
+button:focus {
+  outline: transparent;
+}
+
+.box-shadow {
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.6);
+}
+
+.span-shadow {
+  box-shadow: -10px 0px 5px rgba(0, 0, 0, 0.2);
+}
+
+.bttn {
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  border: none;
+  border-radius: 10px;
+  background-color: rgba(51, 51, 51, .70);
+  padding: 0.8rem;
+  cursor: pointer;
+}
+
+.addFriend {
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  margin: 5px;
+  padding: 5px;
+  transition: transform 0.3s ease-out;
+}
+
+.addFriend h6 {
+  margin-left: 15px;
+}
+
+.addFriend button {
+  width: 50px;
+  height: 50px;
+}
+
+.addFriend:hover {
+  background-color: rgba(34, 37, 75, .70);
+}
+
+.addFriend button:hover {
+  background-color: rgba(17, 17, 17, .70);
+}
+
+.friend {
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  margin: 5px;
+  padding: 5px;
+  transition: transform 0.3s ease-out;
+}
+
+.friend h6 {
+  margin-left: 15px;
+}
+
+.friend img {
+  position: relative;
+  object-fit: cover;
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+}
+
+.friend:hover {
+  background-color: rgba(34, 37, 75, .70);
+  box-shadow: -10px 0px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* SIDEBAR */
+
+.sidebar {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  height: auto;
+  width: 250px;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  color: white;
+  background-color: #1a1c36;
+  z-index: 1;
+}
+
+.tab-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+}
+
+.tab-content {
+  overflow-y: auto;
+  height: 532px;
+}
+
+.tab-btn button {
+  background: transparent;
+  border: none;
+  color: white;
+  margin: 5px;
+  width: 100%;
+  height: 100%;
+}
+
+.friendLabel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #1a1c36;
+  border-radius: 5px;
+  margin: 15px;
+  height: 50px;
+}
+
+.friendSpan {
+  margin-left: 5px;
+}
+
+.friendLabel small {
+  color: cornflowerblue;
+}
+
+.overFriend {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  width: 250px;
+  height: 450px;
+  left: 270px;
+  background-color: #373b69;
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+.overFriend div {
+  margin: 0 0 5px;
+}
+
+
+.overFriend .head {
+  display: flex;
+  background-color: #1a1c36;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.overFriend .game {
+  display: flex;
+  background-color: #1a1c36;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.overFriend .actions {
+  display: flex;
+  background-color: #1a1c36;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.account {
+  display: flex;
+  align-items: center;
+  height: 100px;
+  margin-top: 15px;
+  padding-left: 25px;
+  background-color: #373b69;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+.account img {
+  object-fit: cover;
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+}
+
+.account button {
+  display: flex;
+  flex-direction: column;
+  background: transparent;
+  border: none;
+  color: white;
+  line-height: 18px;
+}
+
+/* END SIDEBAR */
+
+/* NAV */
+
+.header {
+  display: flex;
+  padding: 1.5rem;
+}
+
+/*Todo refont style */
+.header input {
+  background-color: #22254b;
+  color: white;
+  border: 2px solid #eee;
+  border-radius: 50px;
+  padding: 0.5rem 1rem;
+  margin-right: 1rem;
+}
+
+.header button {
+  outline: transparent;
+}
+
+/* END NAV */
+
+.view {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+}
+
+.gameList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.button button {
+  margin: 5px;
+}
+
+.info {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  margin: 10px;
+  width: 50%;
+  height: 100%;
+}
+
+.info button {
+  margin: 1rem;
+  width: 30%;
+  margin-bottom: 20px;
+}
+
+.info .desc {
+  color: white;
+  margin: 1rem;
+  height: 150px;
+}
+
+/* GAMES */
+
+.games {
+  position: relative;
+  background-color: #373b69;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+  margin: 1rem;
+  width: 250px;
+  transition: 0.5s;
+}
+
+.games img {
+  display: inline-block;
+  object-fit: cover;
+  width: 100%;
+}
+
+.games .play {
+  display: flex;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+
+.games:hover {
+  transform: translateY(-10px);
+}
+
+.modal-game {
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  background-color: #373b69;
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+/* END GAMES */
+
+/* FOOTER */
+
+.os {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  border-radius: 10px;
+  background-color: #1a1c36;
+  margin: 20px;
+}
+
+.os h3 {
+  margin: 10px;
+}
+
+/* END FOOTER */
+
+/* OVERVIEW */
+
+.overview {
+  display: flex;
+  position: absolute;
+  justify-content: flex-end;
+  align-items: center;
+  top: -50px;
+  right: 10px;
+  transition: transform 0.3s ease-out;
+}
+
+.games:hover .overview {
+  transform: translateY(60px);
+}
+
+
+/* END OVERVIEW */

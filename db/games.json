@@ -5,26 +5,31 @@
   "1": {
     "name": "Valorant",
     "poids": "20",
+    "description": "Compet",
     "path": "C:\\Riot Games\\VALORANT\\live\\VALORANT.exe",
-    "img": "https://static-cdn.jtvnw.net/ttv-boxart/VALORANT-285x380.jpg"
+    "img": "https://static-cdn.jtvnw.net/ttv-boxart/VALORANT-285x380.jpg",
+    "background": "https://static-cdn.jtvnw.net/ttv-boxart/VALORANT-1080x1920.jpg"
     },
   "2":{
     "name": "Fortnite",
     "poids": "80",
     "path": "Un",
-    "img": "https://static-cdn.jtvnw.net/ttv-boxart/Fortnite-285x380.jpg"
+    "img": "https://static-cdn.jtvnw.net/ttv-boxart/Fortnite-285x380.jpg",
+    "background": "https://static-cdn.jtvnw.net/ttv-boxart/Fortnite-1080x1920.jpg"
   },
   "3":{
     "name": "Fall Guys",
     "poids": "80",
     "path": "Un",
-    "img": "https://static-cdn.jtvnw.net/ttv-boxart/Fall%20Guys-285x380.jpg"
+    "img": "https://static-cdn.jtvnw.net/ttv-boxart/Fall%20Guys-285x380.jpg",
+    "background": "https://static-cdn.jtvnw.net/ttv-boxart/Fall%20Guys-1080x1920.jpg"
   },
   "4":{
     "name": "Rocket League",
     "poids": "80",
     "path": "Un",
-    "img": "https://static-cdn.jtvnw.net/ttv-boxart/Rocket%20League-285x380.jpg"
+    "img": "https://static-cdn.jtvnw.net/ttv-boxart/Rocket%20League-285x380.jpg",
+    "background": "https://static-cdn.jtvnw.net/ttv-boxart/Rocket%20League-1080x1920.jpg"
   },
   "5":{
     "name": "Apex Legends",
@@ -45,7 +50,7 @@
     "img": "https://static-cdn.jtvnw.net/ttv-boxart/Call%20Of%20Duty:%20Modern%20Warfare-285x380.jpg"
   },
   "8":{
-    "name": "Raimbox",
+    "name": "Rainbox",
     "poids": "80",
     "path": "Un",
     "img": "https://static-cdn.jtvnw.net/ttv-boxart/Tom%20Clancy%27s%20Rainbow%20Six:%20Siege-285x380.jpg"

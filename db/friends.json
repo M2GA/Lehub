@@ -1,0 +1,22 @@
+{
+  "1": {
+    "name": "MEYGAH",
+    "img": "https://static-cdn.jtvnw.net/ttv-boxart/VALORANT-285x380.jpg"
+    },
+  "2":{
+    "name": "ALEX",
+    "img": "https://static-cdn.jtvnw.net/ttv-boxart/Fortnite-285x380.jpg"
+  },
+  "3":{
+    "name": "OXLINEOFF",
+    "img": "https://static-cdn.jtvnw.net/ttv-boxart/Fall%20Guys-285x380.jpg"
+  },
+  "4":{
+    "name": "LOMEP",
+    "img": "https://static-cdn.jtvnw.net/ttv-boxart/Rocket%20League-285x380.jpg"
+  },
+  "5":{
+    "name": "Rocket League",
+    "img": "https://static-cdn.jtvnw.net/ttv-boxart/Rocket%20League-285x380.jpg"
+  }
+}
